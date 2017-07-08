@@ -1,0 +1,32 @@
+
+title: Evgeny Shurakov
+subtitle: iOS and sometimes Android Developer
+description: ""
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://shurakov.name" 
+twitter_username: eshurakov
+github_username:  eshurakov
+lang: en
+author:
+  name: Evgeny Shurakov
+
+permalink: /:title/
+excerpt_separator: <!-- More -->
+
+exclude: ['Gemfile.lock', 'Gemfile']
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - jekyll-feed
+
+kramdown:
+  syntax_highlighter: rouge
+
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1

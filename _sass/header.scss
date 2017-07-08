@@ -1,0 +1,47 @@
+
+header.global {
+	padding: 10px 0px 30px 0px;
+	text-align: right;
+
+	@media screen and (max-width: 740px) {
+		margin-bottom: 0;
+		height: auto;
+		position: relative;
+		padding-bottom: 10px;
+	}
+
+	@media screen and (max-width: 600px) {
+		margin-bottom: 0;
+	}
+
+	h1 {
+		margin: 10px 0px 10px 0px;
+		font-weight: 300;
+		font-size: 45px;
+		line-height: 45px;
+		@media screen and (max-width: 740px) {
+			float: none;
+		}
+	}
+
+	a {
+		color: $text-color;
+		&:hover{
+			color: $link-color;
+			border-bottom: none;
+		}
+	}
+
+	.tagline {
+		margin-top: 0px;
+		font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', $font-default;
+		font-size: 25px;
+	}
+
+	.tagline2 {
+		margin-top: 0px;
+		font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', $font-default;
+		font-size: 20px;
+	}
+
+}

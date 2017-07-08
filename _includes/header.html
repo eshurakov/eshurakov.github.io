@@ -1,0 +1,15 @@
+<header class="inner global">
+	<div class="tagline"><a href="/">Evgeny Shurakov</a></div>
+	<div class="tagline2" id="tagline2">iOS and sometimes Android Developer</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+			var taglines = [
+				"iOS and sometimes Android Developer",
+				"iOS and sometimes macOS Developer",
+				"iOS Developer and sometimes an Artist",
+				"iOS Developer and sometimes a Photographer"];
+			var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+			document.getElementById('tagline2').innerHTML = tagline;
+		});
+	</script>
+</header>

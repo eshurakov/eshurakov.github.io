@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+<article class="post">
+	<header>
+		<h2 class="title">
+			<a href="{{ post.url }}">{{ post.title | escape }}</a>
+		</h2>
+		<div class="meta date">{{ post.date | date: "%b %-d, %Y" }}</div>
+	</header>
+	<div class="entry-content">
+		{{ post.excerpt }}
+
+		{% if post.excerpt != post.content %}
+			<a href="{{ post.url }}" class="more-link">Read on →</a>
+		{% endif %}
+	</div>
+</article>
+{% endfor %}

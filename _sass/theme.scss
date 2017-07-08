@@ -1,0 +1,159 @@
+
+$scorpion-gray: #575757;
+$solid-gray: #818181;
+$liquid-gray: #BABABA;
+$gas-gray: #E2E2E2;
+$soft-gray: #ECEBE8;
+
+$color-background: #FCFCFC;
+$link-color: #BF0222;
+$text-color: $scorpion-gray;
+
+$font-default: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
+
+// layout
+
+$max-width: 700px;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $font-default;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.5;
+	background: $color-background;
+    color: $text-color;
+	@media screen and (max-width: 740px) {
+		margin: 0 20px;
+	}
+	@media screen and (max-width: 600px) {
+		font-size: 13px;
+		margin: 0 20px;
+	}
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 36px;
+	line-height:1;
+	font-weight:300;
+}
+
+h3 {
+	font-size: 20px;
+	line-height: 1.2;
+	margin: 1.2em 0 0 0;
+	font-weight: normal;
+	display: block;
+	@media screen and (max-width: 600px) {
+		font-size: 15px;
+	}
+}
+
+a {
+ 	text-decoration: none;
+	color: $link-color;
+	outline: none;
+}
+
+a:hover {
+	border-bottom: 1px solid $link-color;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+img.alignright {
+	margin-left: 40px;
+}
+
+.inner {
+	width: $max-width;
+	margin: 0 auto;
+	@media screen and (max-width: 740px) {
+		width: 100%;
+	}
+}
+
+.clearfix {
+	*zoom:1
+}
+
+.clearfix:after {
+	content:"";
+	display:table;
+	clear:both
+}
+
+// -- layout
+
+// typography
+
+.mono { font-family: $font-mono; }
+.sans { font-family: $font-default; }
+
+.pullquote-right:before,
+.pullquote-left:before {
+  /* Reset metrics. */
+  padding: 0;
+  border: none;
+
+  /* Content */
+  content: attr(data-pullquote);
+
+  /* Pull out to the right, modular scale based margins. */
+  float: right;
+  width: 45%;
+  margin: .5em 0 1em 1.5em;
+
+  /* Baseline correction */
+  position: relative;
+  top: 7px;
+  font-size: 1.4em;
+  line-height: 1.45em;
+}
+
+.pullquote-left:before {
+  /* Make left pullquotes align properly. */
+  float: left;
+  margin: .5em 1.5em 1em 0;
+}
+
+nav {
+	display: inline-block;
+	margin-bottom: 0px;
+	float: center;
+	margin-top: 0px;
+	@media screen and (max-width: 740px) {
+		float: none;
+		margin-left: 0;
+	}
+	>ul {
+		>li {
+			display: inline-block;
+			margin-left: 10px;
+		}
+	}
+}
+
+// -- utils
+
+@import "header";
+@import "footer";
+
+@import "article";
+
+@import "syntax";
