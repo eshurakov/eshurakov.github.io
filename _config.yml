@@ -3,7 +3,7 @@ title: Evgeny Shurakov
 subtitle: iOS and sometimes Android Developer
 description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://shurakov.name" 
+url: "https://shurakov.name" 
 twitter_username: eshurakov
 github_username:  eshurakov
 lang: en
@@ -18,7 +18,7 @@ exclude: ['Gemfile.lock', 'Gemfile']
 # Build settings
 markdown: kramdown
 
-gems:
+plugins:
   - jekyll-feed
 
 kramdown:
