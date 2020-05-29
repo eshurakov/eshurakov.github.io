@@ -1,1 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="https://shurakov.name/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shurakov.name/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-06-01T18:51:01+02:00</updated><id>https://shurakov.name/</id><title type="html">Evgeny Shurakov</title><subtitle></subtitle><author><name>Evgeny Shurakov</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://shurakov.name/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shurakov.name/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-05-30T00:45:10+02:00</updated><id>https://shurakov.name/feed.xml</id><title type="html">Evgeny Shurakov</title><subtitle></subtitle><author><name>Evgeny Shurakov</name></author><entry><title type="html">Localization tips for iOS</title><link href="https://shurakov.name/ios-localization-tips/" rel="alternate" type="text/html" title="Localization tips for iOS" /><published>2020-01-01T12:00:00+01:00</published><updated>2020-01-01T12:00:00+01:00</updated><id>https://shurakov.name/ios-localization-tips</id><content type="html" xml:base="https://shurakov.name/ios-localization-tips/">&lt;p&gt;&lt;strong&gt;Start from day one&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Think about localization from day one, even if the app supports only one language. It doesn’t take much time but makes your life easier in the future.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use identifiers as keys&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use identifiers that reflect the function of the element as well as its location in the app.&lt;/li&gt;
+  &lt;li&gt;Use the same identifier prefix for keys that belong to the same functional unit/page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Write good comments&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Give the key a comment, saying where it is located on the screen, what kind of element it is, and what is the function. Describe all parameters that are used in this string. Use business terms, that is used in the app and not developers slang, cause most likely it won’t be localized by developers :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Always use numbered format specifiers&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When using format specifiers, use numbered ones so that translators can shuffle them around.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;/* Action button to go to the next screen after user picks a date / Select countdown date screen / Create new event flow */
+&quot;create_event_select_countdown_date_action_button&quot; = &quot;Go&quot;;
+
+/* Interval description / Select countdown date screen / Create new event flow. Parameters: %1$@ - formatted number of days (1 day, 5 days) */
+&quot;create_event_select_countdown_date_interval_description&quot; = &quot;Start %1$@ countdown&quot;;
+
+/* Screen title / Select countdown date screen / Create new event flow */
+&quot;create_event_select_countdown_date_title&quot; = &quot;Select countdown date&quot;;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Skip interface builder&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I find it very hard to localize interface builder files and storyboards.
+I tried two options:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;one interface file per language for the same screen is &lt;strong&gt;a lot&lt;/strong&gt; of work to maintain and support&lt;/li&gt;
+  &lt;li&gt;using Xcode string export/import results in keys that don’t make sense and it’s not possible to add a comment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;My solution is to create UI elements in code or connect them from the interface file to the code and do all localization from the code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Provide screenshots&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Screenshots are a great way to understand the context in which strings are used. Understanding context is important to get quality localization.
+Many of localization services (OneSky, Lokalise) provide a library that can take a screenshot and mark all keys it sees on it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Audit language files&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When making a release build, add a step to check that everything is localized. This can be done by going through language files and comparing key and its value. If they are the same, it means the localization is missing.&lt;/p&gt;</content><author><name>Evgeny Shurakov</name></author><summary type="html">Start from day one Think about localization from day one, even if the app supports only one language. It doesn’t take much time but makes your life easier in the future. Use identifiers as keys Use identifiers that reflect the function of the element as well as its location in the app. Use the same identifier prefix for keys that belong to the same functional unit/page. Write good comments Give the key a comment, saying where it is located on the screen, what kind of element it is, and what is the function. Describe all parameters that are used in this string. Use business terms, that is used in the app and not developers slang, cause most likely it won’t be localized by developers :-) Always use numbered format specifiers When using format specifiers, use numbered ones so that translators can shuffle them around. Example 1 2 3 4 5 6 7 8 /* Action button to go to the next screen after user picks a date / Select countdown date screen / Create new event flow */ &quot;create_event_select_countdown_date_action_button&quot; = &quot;Go&quot;; /* Interval description / Select countdown date screen / Create new event flow. Parameters: %1$@ - formatted number of days (1 day, 5 days) */ &quot;create_event_select_countdown_date_interval_description&quot; = &quot;Start %1$@ countdown&quot;; /* Screen title / Select countdown date screen / Create new event flow */ &quot;create_event_select_countdown_date_title&quot; = &quot;Select countdown date&quot;; Skip interface builder I find it very hard to localize interface builder files and storyboards. I tried two options: one interface file per language for the same screen is a lot of work to maintain and support using Xcode string export/import results in keys that don’t make sense and it’s not possible to add a comment My solution is to create UI elements in code or connect them from the interface file to the code and do all localization from the code. Provide screenshots Screenshots are a great way to understand the context in which strings are used. Understanding context is important to get quality localization. Many of localization services (OneSky, Lokalise) provide a library that can take a screenshot and mark all keys it sees on it. Audit language files When making a release build, add a step to check that everything is localized. This can be done by going through language files and comparing key and its value. If they are the same, it means the localization is missing.</summary></entry></feed>
