@@ -69,6 +69,9 @@ img.alignright {
   display: table;
   clear: both; }
 
+div.date {
+  margin-top: 8px; }
+
 .mono, pre, p code, li code {
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace; }
 
