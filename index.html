@@ -1,159 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-	  <meta charset="utf-8">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	  <title>Evgeny Shurakov</title>
-	  <meta name="description" content="">
+	<title>Evgeny Shurakov</title>
+	<meta name="description" content="">
 
-	  <link href="/favicon.png" rel="shortcut icon">
-	  <link rel="stylesheet" href="/css/main.css">
-	  <link rel="canonical" href="https://shurakov.name/">
-	  <link rel="alternate" type="application/rss+xml" title="Evgeny Shurakov" href="https://shurakov.name/feed.xml">
-	</head>
+	<link href="/favicon.png" rel="shortcut icon">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="canonical" href="https://shurakov.name/">
+</head>
 
-  <body>
-  	<header class="inner global">
-	<div class="tagline"><a href="/">Evgeny Shurakov</a></div>
-	<div class="tagline2" id="tagline2">iOS and sometimes Android Developer</div>
-	<script>
-		document.addEventListener("DOMContentLoaded", function(event) {
-			var taglines = [
-				"iOS and sometimes Android Developer",
-				"iOS and sometimes macOS Developer",
-				"iOS Developer and sometimes an Artist",
-				"iOS Developer and sometimes a Photographer"];
-			var tagline = taglines[Math.floor(Math.random() * taglines.length)];
-			document.getElementById('tagline2').innerHTML = tagline;
-		});
-	</script>
-</header>
-
-    <main class="page-content" aria-label="Content">
-      <div class="inner">
-        
-<article class="post">
-	<header>
-		<h2 class="title">
-			<a href="/prepare-for-release/">Prepare for release</a>
-		</h2>
-		<div class="meta date">Feb 2020</div>
+<body>
+	<header class="inner global">
+		<div class="tagline"><a href="/">Evgeny Shurakov</a></div>
+		<div class="tagline2" id="tagline2">iOS and sometimes Android Developer</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function (event) {
+				var taglines = [
+					"iOS and sometimes Android Developer",
+					"iOS and sometimes macOS Developer"
+				];
+				var tagline = taglines[Math.floor(Math.random() * taglines.length)];
+				document.getElementById('tagline2').innerHTML = tagline;
+			});
+		</script>
 	</header>
-	<div class="entry-content">
-		<p>There is more to the process of releasing an app than archiving a project using release build configuration and uploading to the store. As the app grows you want to be sure about the quality.</p>
 
-<p>In the mobile development world delivering the app to the customer takes time. Quite some time :-) Some years ago it was multiple days or even weeks of waiting time, now it’s a bit better and usually takes one or two days (thanks Apple!). Still, if you have a critical bug in the app that you want to fix, one or two days is a lot of time.</p>
+	<main class="page-content" aria-label="Content">
+		<div class="inner">
+			<article>
+				<div class="entry-content">
+					<p>Hello, my name is Evgeny Shurakov and I spend a lot of time crafting iOS apps.</p>
 
-<p>I collected several ways to help to ensure the quality of the app.</p>
+					<h3 id="contacts">Contacts</h3>
 
+					<ul>
+						<li><strong>Email</strong>: inbox [at] this domain</li>
+						<li><strong>GitHub</strong>: <a href="https://github.com/eshurakov">eshurakov</a></li>
+						<li><a href="https://www.linkedin.com/in/evgenyshurakov/">LinkedIn</a></li>
+					</ul>
 
+				</div>
+			</article>
 
-		
-			<a href="/prepare-for-release/" class="more-link">Read on →</a>
-		
-	</div>
-</article>
-
-<article class="post">
-	<header>
-		<h2 class="title">
-			<a href="/ios-localization-tips/">Localization tips for iOS</a>
-		</h2>
-		<div class="meta date">Jan 2020</div>
-	</header>
-	<div class="entry-content">
-		<p><strong>Start from day one</strong></p>
-
-<p>Think about localization from day one, even if the app supports only one language. It doesn’t take much time but makes your life easier in the future.</p>
-
-<p><strong>Use identifiers as keys</strong></p>
-
-<ul>
-  <li>Use identifiers that reflect the function of the element as well as its location in the app.</li>
-  <li>Use the same identifier prefix for keys that belong to the same functional unit/page.</li>
-</ul>
-
-<p><strong>Write good comments</strong></p>
-
-<p>Give the key a comment, saying where it is located on the screen, what kind of element it is, and what is the function. Describe all parameters that are used in this string. Use business terms, that is used in the app and not developers slang, cause most likely it won’t be localized by developers :-)</p>
-
-<p><strong>Always use numbered format specifiers</strong></p>
-
-<p>When using format specifiers, use numbered ones so that translators can shuffle them around.</p>
-
-<p><strong>Example</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre>/* Action button to go to the next screen after user picks a date / Select countdown date screen / Create new event flow */
-"create_event_select_countdown_date_action_button" = "Go";
-
-/* Interval description / Select countdown date screen / Create new event flow. Parameters: %1$@ - formatted number of days (1 day, 5 days) */
-"create_event_select_countdown_date_interval_description" = "Start %1$@ countdown";
-
-/* Screen title / Select countdown date screen / Create new event flow */
-"create_event_select_countdown_date_title" = "Select countdown date";
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p><strong>Skip interface builder</strong></p>
-
-<p>I find it very hard to localize interface builder files and storyboards.
-I tried two options:</p>
-
-<ul>
-  <li>one interface file per language for the same screen is <strong>a lot</strong> of work to maintain and support</li>
-  <li>using Xcode string export/import results in keys that don’t make sense and it’s not possible to add a comment</li>
-</ul>
-
-<p>My solution is to create UI elements in code or connect them from the interface file to the code and do all localization from the code.</p>
-
-<p><strong>Provide screenshots</strong></p>
-
-<p>Screenshots are a great way to understand the context in which strings are used. Understanding context is important to get quality localization.
-Many of localization services (OneSky, Lokalise) provide a library that can take a screenshot and mark all keys it sees on it.</p>
-
-<p><strong>Audit language files</strong></p>
-
-<p>When making a release build, add a step to check that everything is localized. This can be done by going through language files and comparing key and its value. If they are the same, it means the localization is missing.</p>
-
-
-		
-	</div>
-</article>
-
-      </div>
-    </main>
+		</div>
+	</main>
 
 	<footer class="inner">
-	<span class="copyright">&copy; 2022 Evgeny Shurakov</span>
-	<span class="separator">(◕ᴥ◕)</span>
-	<nav>
-		<ul>
-			<li><a href="/about/">About</a></li>
-		</ul>
-	</nav>
-</footer>
-
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-18186151-1']);
-		_gaq.push(['_trackPageview']);
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-
-  </body>
+		<span class="copyright">&copy; 2025 Evgeny Shurakov</span>
+		<span class="separator">(◕ᴥ◕)</span>
+	</footer>
+</body>
 
 </html>
