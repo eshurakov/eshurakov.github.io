@@ -7,7 +7,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Evgeny Shurakov</title>
-	<meta name="description" content="">
+	<meta name="description" content="Software Engineer Evgeny Shurakov's personal website">
+	<meta name="author" content="Evgeny Shurakov">
+
+	<!-- Open Graph / Social Media -->
+	<meta property="og:title" content="Evgeny Shurakov">
+	<meta property="og:description" content="Software Engineer Evgeny Shurakov's personal website">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://shurakov.name/">
+
+	<!-- Theme Color for browsers -->
+	<meta name="theme-color" content="#FCFCFC">
 
 	<link href="/favicon.png" rel="shortcut icon">
 	<link rel="stylesheet" href="/css/main.css">
@@ -17,43 +27,191 @@
 <body>
 	<header class="inner global">
 		<div class="tagline"><a href="/">Evgeny Shurakov</a></div>
-		<div class="tagline2" id="tagline2">iOS and sometimes Android Developer</div>
-		<script>
-			document.addEventListener("DOMContentLoaded", function (event) {
-				var taglines = [
-					"iOS and sometimes Android Developer",
-					"iOS and sometimes macOS Developer"
-				];
-				var tagline = taglines[Math.floor(Math.random() * taglines.length)];
-				document.getElementById('tagline2').innerHTML = tagline;
-			});
-		</script>
+		<div class="tagline2" id="tagline2">Software Engineer</div>
 	</header>
 
 	<main class="page-content" aria-label="Content">
-		<div class="inner">
+		<section class="inner">
 			<article>
 				<div class="entry-content">
-					<p>Hello, my name is Evgeny Shurakov and I spend a lot of time crafting iOS apps.</p>
+					<p>Hello, my name is Evgeny Shurakov and I'm a Software Engineer with expertise in building both
+						server side and mobile applications.</p>
 
 					<h3 id="contacts">Contacts</h3>
 
 					<ul>
-						<li><strong>Email</strong>: inbox [at] this domain</li>
-						<li><strong>GitHub</strong>: <a href="https://github.com/eshurakov">eshurakov</a></li>
-						<li><a href="https://www.linkedin.com/in/evgenyshurakov/">LinkedIn</a></li>
+						<li><strong>Email</strong>: <span aria-label="email address">inbox [at] this domain</span></li>
+						<li><strong>GitHub</strong>: <a href="https://github.com/eshurakov"
+								aria-label="GitHub profile for Evgeny Shurakov">eshurakov</a></li>
+						<li><a href="https://www.linkedin.com/in/evgenyshurakov/"
+								aria-label="LinkedIn profile for Evgeny Shurakov">LinkedIn Profile</a></li>
 					</ul>
+
+					<h3 id="experience">Work Experience</h3>
+
+					<div class="job">
+						<h4><span class="job-company"><a href="https://automattic.com" target="_blank"
+									rel="noopener">Automattic</a></span> <span class="job-title">Senior Software
+								Engineer</span> <span class="job-date">Oct 2020 - Apr 2025</span> <span
+								class="job-location">Remote</span></h4>
+						<ul>
+							<li><span class="project-name">Simplenote:</span> Developed iOS app and contributed to macOS
+								version, supported current backend (Python) and participated in migration to
+								Erlang.</li>
+							<li><span class="project-name">Day One:</span> Led the backend team as the technical lead,
+								actively developing server components using Node.js, ReScript, and TypeScript;
+								consolidated services on AWS and implemented security hardening measures.</li>
+							<li><span class="project-name">AI Experiments:</span> Explored on-device LLM support and
+								local RAG pipeline for Apple Silicon Macs.</li>
+						</ul>
+						<div class="tech-tags">
+							<span class="tag">Tech Lead</span>
+							<span class="tag">iOS</span>
+							<span class="tag">macOS</span>
+							<span class="tag">Erlang</span>
+							<span class="tag">TypeScript</span>
+							<span class="tag">ReScript</span>
+							<span class="tag">AWS</span>
+							<span class="tag">LLM</span>
+						</div>
+					</div>
+
+					<div class="transition-pill">
+						<span>Sabbatical Break</span>
+					</div>
+
+					<div class="job">
+						<h4><span class="job-company"><a href="https://www.polarsteps.com" target="_blank"
+									rel="noopener">Polarsteps</a></span> <span class="job-title">iOS Developer</span>
+							<span class="job-date">Apr 2019 - Jan 2020</span>
+						</h4>
+						<p>Contributed to the travel tracking app for iOS, helping users document and share their
+							journey experiences.</p>
+						<div class="tech-tags">
+							<span class="tag">iOS</span>
+							<span class="tag">Swift</span>
+							<span class="tag">Objective-C</span>
+							<span class="tag">Reactive Programming</span>
+						</div>
+					</div>
+
+					<div class="job">
+						<h4><span class="job-company"><a href="https://getbux.com" target="_blank"
+									rel="noopener">BUX</a></span> <span class="job-title">Mobile Developer</span> <span
+								class="job-date">Mar 2014 - Apr 2019</span></h4>
+						<p>Built iOS trading app from scratch, collaborated with product and backend teams.</p>
+						<div class="tech-tags">
+							<span class="tag">iOS</span>
+							<span class="tag">Swift</span>
+							<span class="tag">Objective-C</span>
+						</div>
+					</div>
+
+					<div class="job">
+						<h4><span class="job-company"><a href="https://www.booking.com" target="_blank"
+									rel="noopener">Booking.com</a></span> <span class="job-title">iOS Developer</span>
+							<span class="job-date">Dec 2013 - Mar 2014</span>
+						</h4>
+						<p>Worked on Booking.com iPad app following eBuddy acquisition.</p>
+						<div class="tech-tags">
+							<span class="tag">iOS</span>
+							<span class="tag">Objective-C</span>
+						</div>
+					</div>
+
+					<div class="transition-pill">
+						<span><a href="https://thenextweb.com/news/booking-com-acquries-mobile-web-messaging-company-ebuddy"
+								target="_blank" rel="noopener">Acqui-hired by Booking.com</a></span>
+					</div>
+
+					<div class="job">
+						<h4><span class="job-company">eBuddy</span> <span class="job-title">iOS Developer</span> <span
+								class="job-date">Mar 2013 - Dec 2013</span></h4>
+						<p>Collaborated with Japanese team on GREE Messenger app and maintained eBuddy XMS app.</p>
+						<div class="tech-tags">
+							<span class="tag">iOS</span>
+							<span class="tag">Objective-C</span>
+							<span class="tag">Messaging</span>
+						</div>
+					</div>
+
+					<div class="job">
+						<h4><span class="job-company">GGDynamics</span> <span class="job-title">iOS Developer</span>
+							<span class="job-date">Sep 2010 - Feb 2013</span> <span class="job-location">Remote</span>
+						</h4>
+						<p>Developed iOS applications with both client and server-side components.</p>
+						<div class="tech-tags">
+							<span class="tag">iOS</span>
+							<span class="tag">Objective-C</span>
+						</div>
+					</div>
+
+					<div class="job">
+						<h4><span class="job-company">JetStyle</span> <span class="job-title">Web Developer</span> <span
+								class="job-date">Oct 2005 - Jun 2010</span></h4>
+						<p>Developed in-house PHP framework and built corporate websites.</p>
+						<div class="tech-tags">
+							<span class="tag">PHP</span>
+							<span class="tag">Web</span>
+						</div>
+					</div>
 
 				</div>
 			</article>
 
-		</div>
+		</section>
 	</main>
 
 	<footer class="inner">
-		<span class="copyright">&copy; 2025 Evgeny Shurakov</span>
-		<span class="separator">(◕ᴥ◕)</span>
+		<div class="footer-content">
+			<span class="copyright">&copy; 2025 Evgeny Shurakov</span>
+			<span class="separator">(◕ᴥ◕)</span>
+		</div>
+		<div class="theme-control">
+			<span class="theme-label">Theme:</span>
+			<span class="theme-mode" data-mode="light">light</span>
+			<span class="theme-mode" data-mode="dark">dark</span>
+		</div>
 	</footer>
+
+	<script>
+		// Theme Control Functionality
+		const themeControls = document.querySelectorAll('.theme-mode');
+		const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+		// Function to set the theme
+		function setTheme(mode) {
+			document.documentElement.setAttribute('data-theme', mode);
+			localStorage.setItem('theme-mode', mode);
+
+			// Update active state on controls
+			themeControls.forEach(control => {
+				if (control.getAttribute('data-mode') === mode) {
+					control.classList.add('active');
+				} else {
+					control.classList.remove('active');
+				}
+			});
+		}
+
+		// Initialize theme based on saved preference or system
+		const savedMode = localStorage.getItem('theme-mode');
+		if (savedMode) {
+			setTheme(savedMode);
+		} else {
+			// Use system preference if no saved preference
+			setTheme(prefersDarkScheme.matches ? 'dark' : 'light');
+		}
+
+		// Add click handlers to theme controls
+		themeControls.forEach(control => {
+			control.addEventListener('click', () => {
+				const mode = control.getAttribute('data-mode');
+				setTheme(mode);
+			});
+		});
+
+	</script>
 </body>
 
 </html>
