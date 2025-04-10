@@ -499,6 +499,21 @@ script#border-fix {
     color: #ddd;
 }
 
+.project-duration {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #666;
+    background: #f0f0f0;
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+    margin-left: 0.25rem;
+}
+
+[data-theme="dark"] .project-duration {
+    color: #aaa;
+    background: #333;
+}
+
 /* Transition Pills */
 .transition-pill {
     text-align: center;
