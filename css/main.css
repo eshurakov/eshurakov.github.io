@@ -962,3 +962,22 @@ input,
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.additional-experience {
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.additional-experience .experience-label {
+    font-weight: 400;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-right: 0.5rem;
+}
+
+[data-theme="dark"] .additional-experience {
+    opacity: 0.7;
+}
